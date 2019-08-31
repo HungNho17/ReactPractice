@@ -14,7 +14,7 @@
   },
   "build": {
     "appId": "com.hungti.runshell",
-    "productName": "RUN_SHELL",
+    "productName": "SHOPING_LIST",
     "directories": {
       "output": "./electron/build"
     },
