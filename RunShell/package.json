@@ -1,0 +1,47 @@
+{
+  "name": "runshell",
+  "version": "1.0.0",
+  "author": "HungTi",
+  "license": "MIT",
+  "main": "electron/main.js",
+  "description": "Run shell on window to open app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config ./config/webpack.config.js --open --mode development --hot --watch",
+    "build": "webpack --config ./config/webpack.config.js --mode production",
+    "build-win": "set NODE_ENV=production && electron-builder --win",
+    "start": "set NODE_ENV=development && electron ."
+  },
+  "build": {
+    "appId": "com.hungti.runshell",
+    "productName": "RUN_SHELL",
+    "directories": {
+      "output": "./electron/build"
+    },
+    "win": {
+      "target": "nsis",
+      "asar": "false"
+    },
+    "nsis": {
+      "oneClick": "false",
+      "allowToChangeInstallationDirectory": "true",
+      "deleteAppDataOnUninstall": "true"
+    }
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "electron": "^6.0.2",
+    "electron-builder": "^21.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
