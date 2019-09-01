@@ -5,3 +5,5 @@ practice main and renderer process in electron
 1.9
 practice redux saga
 issue: regeneratorRuntime is not define .. fixed
+note: class and function in react should satart with UPER LETER
+issue: load .gif file error .. fixed
