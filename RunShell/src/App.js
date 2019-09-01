@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import ButtonComp from './components/button';
+import LoadingComp from './components/loading';
+import NewsItemComp from './components/newsItem';
 
 class App extends Component {
   render() {
@@ -7,8 +10,10 @@ class App extends Component {
         <h1> 
           Hello Hung nho!
           <br/> 
-          How are you
         </h1>
+        <ButtonComp />
+        <LoadingComp />
+        <NewsItemComp />
       </div>
     );
   }

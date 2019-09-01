@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 
 var webpackConfig = {
-  entry: "./src/index.js",
   entry: ['@babel/polyfill', './index.js'],
   output: {
     path: path.join(__dirname, "/../dist"),
@@ -27,12 +26,19 @@ var webpackConfig = {
             ]
           }
         }
+      },
+      {
+        test: /\.gif$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "file-loader"
+        }
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html"
+      template: "./index.html"
     })
   ]
 };
