@@ -1,3 +1,7 @@
 31.8
 create repo
 practice main and renderer process in electron
+
+1.9
+practice redux saga
+issue: regeneratorRuntime is not define .. fixed

@@ -4,6 +4,7 @@ const webpack = require('webpack');
 
 var webpackConfig = {
   entry: "./src/index.js",
+  entry: ['@babel/polyfill', './index.js'],
   output: {
     path: path.join(__dirname, "/../dist"),
     filename: "app.bundle.js"
