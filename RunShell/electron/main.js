@@ -53,7 +53,7 @@ function createWindow() {
   const menu = Menu.buildFromTemplate(mainMenuTemplate);
   Menu.setApplicationMenu(menu);
 
-  win.loadURL(`file://${__dirname}/src/main.html`)
+  win.loadURL(`file://${__dirname}/src/main_process.html`)
 
   // win.webContents.openDevTools();
 

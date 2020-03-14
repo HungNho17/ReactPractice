@@ -6,7 +6,8 @@ var webpackConfig = {
   entry: ['@babel/polyfill', './index.js'],
   output: {
     path: path.join(__dirname, "/../dist"),
-    filename: "app.bundle.js"
+    filename: "app.bundle.js",
+    futureEmitAssets: true
   },
   devServer:{
     host: "localhost",
